@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Welcome to URL Shortner
+{% endblock %}
+
+{% block body %}
+<br />
+<form method="POST" onsubmit="chkField()" name="urlForm">
+<div class="col-25">
+      <label for="url_ip">Enter an URL : </label>
+    </div>
+    <div class="col-75">
+       <input type="url" name="url" id="url_ip" placeholder="Enter the URL" >
+    </div>
+
+     <div class="row">
+    <input type="submit" name="submit" value="Submit"/>
+  </div>
+
+</form>
+<div class="col-25">
+      <label for="shortUrl">Shorten URL : </label>
+    </div>
+<div class="url-show">
+    <h2 id="shortUrl">{{ shortUrl }}</h2></div>
+<div class="row">
+<button onclick="copyEvent('shortUrl')">Copy</button>
+</div>
+{% endblock body %}

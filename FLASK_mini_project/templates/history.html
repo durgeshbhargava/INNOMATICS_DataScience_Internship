@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}URL History{% endblock %}
+
+{% block body %}
+    {% for url in vals %}
+<table>
+  <tr>
+    <th>Short URL:</th>
+    <th>Original</th>
+  </tr>
+  <tr>
+    <td>{{"127.0.0.1:5000/"+url.short}}</td><br>
+    <td> {{url.long}}</td><br>
+  </tr>
+</table>
+    {% endfor %}
+{% endblock %}
+
+
+
+
